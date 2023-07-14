@@ -1,6 +1,7 @@
-### Какую задачу решаем
+1. Task: [link](https://linear.app/)
+2. Screenshot:
 
-
-### Скриншоты/видяшка (если есть)
-
-### TBD (если есть)
+3. Was done:
+  - [x] Feature 1
+  - [x] Feature 2
+  - [ ] Feature 3
