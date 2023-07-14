@@ -16,7 +16,9 @@
 
 ### Vercel auto deploy
 Register the account [vercel](https://vercel.com/)
+
 Follow [instructions](https://vitejs.dev/guide/static-deploy.html#vercel-for-git)
+
 As `root directory` define `packages/client`
 
 ### Production in docker
@@ -27,7 +29,9 @@ As `root directory` define `packages/client`
 3. "postgres"
 
 If you need only one service then specify it command:
+
 `docker compose up {sevice_name}`, example: `docker compose up server`
 
 If you need to rebuild service use command:
+
 `docker compose build {sevice_name}`
