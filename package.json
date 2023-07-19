@@ -1,16 +1,18 @@
 {
-  "name": "client-server-template-with-vite",
+  "name": "MapPins-merge-service",
   "private": true,
   "scripts": {
-    "bootstrap": "yarn && node init.js && lerna clean && yarn && lerna bootstrap",
-    "build": "lerna run build",
+    "bootstrap": "yarn && node init.js && lerna clean && yarn && lerna bootstrap && yarn package-link",
+    "build": "rm -rf ./packages/client/dist/ ./packages/client/dist-ssr/ ./packages/server/dist/ && lerna run build",
     "dev:client": "lerna run dev  --scope=client",
     "dev:server": "lerna run dev --scope=server",
     "dev": "lerna run dev",
     "test": "lerna run test",
     "lint": "lerna run lint",
     "format": "lerna run format",
-    "preview": "lerna run preview"
+    "preview": "lerna run preview",
+    "package-link": "lerna run build --scope=client && lerna run link --scope=client && lerna run link:client --scope=server",
+    "docker": "docker compose -f docker-compose.yml up server"
   },
   "license": "MIT",
   "workspaces": [
@@ -21,6 +23,7 @@
   },
   "devDependencies": {
     "@evilmartians/lefthook": "^1.1.1",
-    "lerna": "^5.4.3"
+    "lerna": "^5.4.3",
+    "typescript": "^5.1.3"
   }
 }
